@@ -1,0 +1,17 @@
+# Be sure to restart your server when you modify this file.
+
+# This file used to store application level config settings
+
+common:
+  support_email: admin@propelbizapps.com
+  client_name: ShredCorp
+  client_customer_start_number: 300000
+
+development:
+  root_url: localhost:3000
+
+test:
+
+# Do not keep production secrets in the repository,
+# instead read values from the environment.
+production:
