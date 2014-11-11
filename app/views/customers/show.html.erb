@@ -7,7 +7,7 @@
 
 <p>
   <strong>Customer Name:</strong>
-  <%= @customer.customer_number %>
+  <%= @customer.customer_name %>
 </p>
 
 <p>
@@ -19,6 +19,19 @@
   <strong>Bill Attention:</strong>
   <%= @customer.bill_attention %>
 </p>
+
+<p>
+  <strong>Invoice Type:</strong>
+  <%= @customer.invoice_type %>
+</p>
+
+<p>
+  <strong>Need to Work:</strong>
+  <%= @customer.need_to_work %>
+</p>
+
+
+
 
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>

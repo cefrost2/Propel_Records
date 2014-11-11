@@ -1,43 +1,34 @@
 <div class="authform">
-<%= form_for(@customer) do |f| %>
-  <% if @customer.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
-
-      <ul>
-      <% @customer.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+<%= simple_form_for @customer, as: 'customer', html: { class: 'form-horizontal' },
+  wrapper: :horizontal_form,
+  wrapper_mappings: {
+    boolean: :horizontal_boolean
+  } do |f| %>
 
   <div class="field">
-    <%= f.label :customer_number %><br>
-    <%= f.text_field :customer_number %>
+    <%= f.input :customer_number %><br>
   </div>
 
   <div class="field">
-    <%= f.label :customer_name %><br>
-    <%= f.text_field :customer_name %>
+    <%= f.input :customer_name %><br>
   </div>
   <div class="field">
-    <%= f.label :contact_name %><br>
-    <%= f.text_field :contact_name %>
+    <%= f.input :contact_name %><br>
   </div>
   <div class="field">
-    <%= f.label :bill_attention %><br>
-    <%= f.text_field :bill_attention %>
+    <%= f.input :bill_attention %><br>
   </div>
-  <div class="select" name="InvoiceType">
-    <option>"Please select"</option>
-    <option>"Paper"</option>
+  <div class="field">
+    <%= f.select :invoice_type, Customer::INVOICE_OPTIONS %><br>
   </div>
+  <div class="field">
+    <%= f.input :need_to_work %><br>
+  </div>
+
 <br>
 <br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.button :submit %>
   </div>
 <% end %>
 </div>

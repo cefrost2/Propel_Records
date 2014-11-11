@@ -7,7 +7,10 @@
       <th>Customer Name</th>
       <th>Contact Name</th>
       <th>Bill Attention</th>
-      <th colspan="4"></th>
+      <th>Invoice Type</th>
+      <th>Need to work</th>
+      
+      <th colspan="6"></th>
     </tr>
   </thead>
 
@@ -18,6 +21,9 @@
         <td><%= customer.customer_name %></td>
         <td><%= customer.contact_name %></td>
         <td><%= customer.bill_attention %></td>
+        <td><%= customer.invoice_type %></td>
+        <td><%= customer.need_to_work %></td>
+        
         <td><%= link_to 'Show', customer %></td>
         <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
         <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

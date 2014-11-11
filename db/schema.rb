@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20141104114153) do
     t.string   "customer_name",   limit: 100
     t.string   "contact_name",    limit: 40
     t.string   "bill_attention",  limit: 50,  default: "Accounts Payable"
+    t.string   "need_to_work"
+    t.string   "invoice_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -38,7 +38,7 @@ private
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_params
-      params.require(:customer).permit(:customer_number, :customer_name, :contact_name, :bill_attention)
+      params.require(:customer).permit(:customer_number, :customer_name, :contact_name, :bill_attention, :invoice_type, :need_to_work)
     end
 
 end
