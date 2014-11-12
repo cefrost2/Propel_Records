@@ -1,0 +1,32 @@
+<div class="authform">
+<%= simple_form_for @location, as: 'location', html: { class: 'form-horizontal' },
+  wrapper: :horizontal_form,
+  wrapper_mappings: {
+    boolean: :horizontal_boolean
+  } do |f| %>
+
+  <div class="field">
+    <%= f.input :description, :label => "Location Description", :hint => "i.e. Headquarters, plant, main office" %><br>
+  </div>
+
+  <div class="field">
+    <%= f.input :address1 %><br>
+  </div>
+  <div class="field">
+    <%= f.input :address2 %><br>
+  </div>
+  <div class="field">
+    <%= f.input :mail_stop %><br>
+  </div>
+  <div class="field">
+    <%= f.input :city %>
+    <%= f.input :state %>
+    <%= f.input :zip %>
+   </div>
+<br>
+<br>
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+</div>

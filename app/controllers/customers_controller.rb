@@ -11,6 +11,7 @@ end
 
 def new
 	@customer = Customer.new
+  @customer.customer_number = @customer.id 
 end
 
 

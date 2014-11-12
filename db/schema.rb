@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141104114153) do
+ActiveRecord::Schema.define(version: 20141111173718) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,18 @@ ActiveRecord::Schema.define(version: 20141104114153) do
     t.string   "bill_attention",  limit: 50,  default: "Accounts Payable"
     t.string   "need_to_work"
     t.string   "invoice_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "locations", force: true do |t|
+    t.string   "description"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "mail_stop"
+    t.string   "city"
+    t.string   "state",       limit: 2
+    t.string   "zip"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

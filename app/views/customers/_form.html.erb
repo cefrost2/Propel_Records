@@ -6,7 +6,8 @@
   } do |f| %>
 
   <div class="field">
-    <%= f.input :customer_number %><br>
+    <%= f.label :customer_id%>
+    <%= f.input :customer_number, :label => "Number", :hint => "needs to be auto incremented" %><br>
   </div>
 
   <div class="field">
@@ -19,7 +20,7 @@
     <%= f.input :bill_attention %><br>
   </div>
   <div class="field">
-    <%= f.select :invoice_type, Customer::INVOICE_OPTIONS %><br>
+    <%= f.input :invoice_type, :collection => Customer::INVOICE_OPTIONS, :include_blank => false %><br>
   </div>
   <div class="field">
     <%= f.input :need_to_work %><br>
